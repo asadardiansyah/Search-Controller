@@ -13,6 +13,10 @@
 		8A771CBA2537441D0080C842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A771CB82537441D0080C842 /* Main.storyboard */; };
 		8A771CBC2537441E0080C842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A771CBB2537441E0080C842 /* Assets.xcassets */; };
 		8A771CBF2537441E0080C842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A771CBD2537441E0080C842 /* LaunchScreen.storyboard */; };
+		8A771CC8253748190080C842 /* BeritaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A771CC6253748190080C842 /* BeritaCell.swift */; };
+		8A771CC9253748190080C842 /* BeritaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A771CC7253748190080C842 /* BeritaCell.xib */; };
+		8A771CCB253749500080C842 /* BeritaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A771CCA253749500080C842 /* BeritaModel.swift */; };
+		8A771CCD25375D6E0080C842 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A771CCC25375D6E0080C842 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		8A771CBB2537441E0080C842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A771CBE2537441E0080C842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A771CC02537441E0080C842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A771CC6253748190080C842 /* BeritaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaCell.swift; sourceTree = "<group>"; };
+		8A771CC7253748190080C842 /* BeritaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeritaCell.xib; sourceTree = "<group>"; };
+		8A771CCA253749500080C842 /* BeritaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeritaModel.swift; sourceTree = "<group>"; };
+		8A771CCC25375D6E0080C842 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				8A771CBB2537441E0080C842 /* Assets.xcassets */,
 				8A771CBD2537441E0080C842 /* LaunchScreen.storyboard */,
 				8A771CC02537441E0080C842 /* Info.plist */,
+				8A771CC6253748190080C842 /* BeritaCell.swift */,
+				8A771CC7253748190080C842 /* BeritaCell.xib */,
+				8A771CCA253749500080C842 /* BeritaModel.swift */,
+				8A771CCC25375D6E0080C842 /* Network.swift */,
 			);
 			path = "Search Controller";
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A771CC9253748190080C842 /* BeritaCell.xib in Resources */,
 				8A771CBF2537441E0080C842 /* LaunchScreen.storyboard in Resources */,
 				8A771CBC2537441E0080C842 /* Assets.xcassets in Resources */,
 				8A771CBA2537441D0080C842 /* Main.storyboard in Resources */,
@@ -138,6 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A771CCB253749500080C842 /* BeritaModel.swift in Sources */,
+				8A771CC8253748190080C842 /* BeritaCell.swift in Sources */,
+				8A771CCD25375D6E0080C842 /* Network.swift in Sources */,
 				8A771CB72537441D0080C842 /* ViewController.swift in Sources */,
 				8A771CB32537441D0080C842 /* AppDelegate.swift in Sources */,
 				8A771CB52537441D0080C842 /* SceneDelegate.swift in Sources */,

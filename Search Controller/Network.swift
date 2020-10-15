@@ -13,7 +13,7 @@ class Network {
         let postData = parameters.data(using: .utf8)
         
         let query = judul.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? ""
-        let url = URL(string: "https://api-penerjemah.setkab.go.id/api/public/berita/filter?isPublished=true&categoryId=5&judul=\(query)")!
+        let url = URL(string: "https://api-penerjemah.setkab.go.id/api/public/glossarium/filter?q=\(query)&isAsing=false")!
         var request = URLRequest(url: url,timeoutInterval: Double.infinity)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -51,9 +51,5 @@ class Network {
         }
         
         task.resume()
-    }
-
-    static func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
 }

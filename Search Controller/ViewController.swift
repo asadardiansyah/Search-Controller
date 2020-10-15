@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var tfSearch: UITextField!
+    
+    private var dataBerita: [Berita]?
     private var searchText: String = ""
     private var timer: Timer?
-    private var dataBerita: [Berita]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +52,23 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataBerita?.count ?? 0
+        if dataBerita?.count != 0 {
+            return dataBerita?.count ?? 0
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard dataBerita?.count != 0 else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "No data to show"
+            cell.textLabel?.font = UIFont.italicSystemFont(ofSize: 15)
+            cell.textLabel?.textAlignment = .center
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "BeritaCell") as! BeritaCell
-        cell.initData(dataBook: dataBerita?[indexPath.row])
+        cell.initData(dataBerita: dataBerita?[indexPath.row])
         return cell
     }
 }

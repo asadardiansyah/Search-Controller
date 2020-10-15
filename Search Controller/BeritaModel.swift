@@ -14,14 +14,7 @@ struct BeritaModel: Decodable {
 }
 
 struct Berita: Decodable {
-    let judul: String?
-    let shortContentIna: String?
-    let urlGambar: String?
-    var completeUrl: String? {
-        if let url = urlGambar {
-            return "https://api-penerjemah.setkab.go.id" + url
-        } else {
-            return nil
-        }
-    }
+    let id: String?
+    let istilahIndonesia: String?
+    let bidang: String?
 }

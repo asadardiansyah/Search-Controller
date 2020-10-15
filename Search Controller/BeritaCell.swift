@@ -10,6 +10,7 @@ import UIKit
 
 class BeritaCell: UITableViewCell {
     @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lblId: UILabel!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     
@@ -20,21 +21,9 @@ class BeritaCell: UITableViewCell {
         self.imgView.contentMode = .scaleAspectFill
     }
     
-    func initData(dataBook: Berita?) {
-        if let completeUrl = dataBook?.completeUrl, let url = URL(string: completeUrl) {
-            downloadImage(from: url)
-        }
-        self.lblTitle.text = dataBook?.judul
-        self.lblDescription.text = dataBook?.shortContentIna
-    }
-    
-    func downloadImage(from url: URL) {
-        Network.getData(from: url) { data, response, error in
-            guard let data = data, error == nil else { return }
-            print(url.absoluteString)
-            DispatchQueue.main.async() {
-                self.imgView.image = UIImage(data: data)
-            }
-        }
+    func initData(dataBerita: Berita?) {
+        self.lblId.text = dataBerita?.id
+        self.lblTitle.text = dataBerita?.istilahIndonesia
+        self.lblDescription.text = "Bidang: \(dataBerita?.bidang ?? "-")"
     }
 }
